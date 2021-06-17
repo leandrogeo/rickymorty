@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>infolugares</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lugares"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4"offsetMd="4">
+
+        <div *ngIf="character"> 
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <ion-card-title>
+                {{character.name}}
+              </ion-card-title>
+              <p>
+                Tipo:
+                {{character.type}}
+              </p>
+              <p>
+                Dimension:
+                {{character.dimension}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

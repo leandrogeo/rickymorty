@@ -11,6 +11,24 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'listadeusuarios',
+    loadChildren: () => import('./listadeusuarios/listadeusuarios.module').then( m => m.ListadeusuariosPageModule)
+  },
+  {
+    path: 'perfil/:id',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'lugares',
+    loadChildren: () => import('./lugares/lugares.module').then( m => m.LugaresPageModule)
+  },
+  {
+    path: 'infolugares/:id',
+    loadChildren: () => import('./infolugares/infolugares.module').then( m => m.InfolugaresPageModule)
+  },
+
+
 ];
 
 @NgModule({
